@@ -7,9 +7,13 @@ class SplashScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       body: SafeArea(
-        child: Container(
-                color: Colors.red,
-
+        child: Column(
+          children: [
+            Text(
+              "Eat Fresh",
+              style: Theme.of(context).textTheme.displayLarge,
+            ),
+          ],
         ),
       ),
     );

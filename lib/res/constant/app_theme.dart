@@ -106,28 +106,51 @@ class AppTheme {
 TextTheme buildTextTheme(TextTheme base) {
   return TextTheme(
     /// Body Text
-    bodySmall: TextStyle(fontSize: 12.0, letterSpacing: 0.4, fontWeight: FontWeight.w400, color: base.bodySmall!.color),
-    bodyMedium: TextStyle(fontSize: 14.0, letterSpacing: 0.25, fontWeight: FontWeight.w400, color: base.bodyMedium!.color),
-    bodyLarge: TextStyle(fontSize: 16.0, letterSpacing: 0.5, fontWeight: FontWeight.w400, color: base.bodyLarge!.color),
-
-    /// Headline Text
-    headlineSmall: TextStyle(fontSize: 24.0, letterSpacing: 0.0, fontWeight: FontWeight.w400, color: base.headlineSmall!.color),
-    headlineMedium: TextStyle(fontSize: 34.0, letterSpacing: 0.25, fontWeight: FontWeight.w400, color: base.headlineMedium!.color),
-    headlineLarge: TextStyle(fontSize: 96.0, letterSpacing: -1.5, fontWeight: FontWeight.w300, color: base.headlineLarge!.color),
-
-    /// Display Text
-    displaySmall: TextStyle(fontSize: 48.0, letterSpacing: 0.0, fontWeight: FontWeight.w400, color: base.displaySmall!.color),
-    displayMedium: TextStyle(fontSize: 60.0, letterSpacing: -0.5, fontWeight: FontWeight.w300, color: base.displayMedium!.color),
-    displayLarge: TextStyle(fontSize: 96.0, letterSpacing: -1.5, fontWeight: FontWeight.w300, color: base.displayLarge!.color),
-
-    /// Title Text
-    titleSmall: TextStyle(fontSize: 14.0, letterSpacing: 0.1, fontWeight: FontWeight.w500, color: base.titleSmall!.color),
-    titleMedium: TextStyle(fontSize: 16.0, letterSpacing: 0.15, fontWeight: FontWeight.w400, color: base.titleMedium!.color),
-    titleLarge: TextStyle(fontSize: 20.0, letterSpacing: 0.15, fontWeight: FontWeight.w500, color: base.titleLarge!.color),
+    bodySmall: base.bodySmall!.copyWith(fontSize: 12, height: 1.33),
+    bodyMedium: base.bodyMedium!.copyWith(fontSize: 14, height: 1.43),
+    bodyLarge: base.bodyLarge!.copyWith(fontSize: 16, height: 1.5),
 
     /// Label Text
-    labelSmall: TextStyle(fontSize: 10.0, letterSpacing: 1.5, fontWeight: FontWeight.w400, color: base.labelSmall!.color),
-    labelMedium: TextStyle(fontSize: 10.0, letterSpacing: 1.5, fontWeight: FontWeight.w400, color: base.labelMedium!.color),
-    labelLarge: TextStyle(fontSize: 14.0, letterSpacing: 1.25, fontWeight: FontWeight.w400, color: base.labelLarge!.color),
+    labelSmall: base.labelSmall!.copyWith(fontSize: 11, height: 1.45),
+    labelMedium: base.labelMedium!.copyWith(fontSize: 12, height: 1.33),
+    labelLarge: base.labelLarge!.copyWith(fontSize: 14, height: 1.43),
+
+    /// Title Text
+    titleSmall: base.titleSmall!.copyWith(fontSize: 14, height: 1.43),
+    titleMedium: base.titleMedium!.copyWith(fontSize: 16, height: 1.5),
+    titleLarge: base.titleLarge!.copyWith(fontSize: 22, height: 1.27),
+
+    /// Headline Text
+    headlineSmall: base.headlineSmall!.copyWith(fontSize: 24, height: 1.33),
+    headlineMedium: base.headlineMedium!.copyWith(fontSize: 28, height: 1.29),
+    headlineLarge: base.headlineLarge!.copyWith(fontSize: 32, height: 1.25),
+
+    /// Display Text
+    displaySmall: base.displaySmall!.copyWith(fontSize: 36, height: 1.22),
+    displayMedium: base.displayMedium!.copyWith(fontSize: 45, height: 1.16),
+    displayLarge: base.displayLarge!.copyWith(fontSize: 57, height: 1.12),
   );
 }
+
+/// ---- Flutter official material 3 typography font size ---------------->>>
+/*
+Body Small  Size: 12, Height: 1.33
+Body Medium  Size: 14, Height: 1.43
+Body Large  Size: 16, Height: 1.5
+
+Label Small  Size: 11, Height: 1.45
+Label Medium  Size: 12, Height: 1.33
+Label Large  Size: 14, Height: 1.43
+
+Title Small  Size: 14, Height: 1.43
+Title Medium  Size: 16, Height: 1.5
+Title Large  Size: 22, Height: 1.27
+
+Headline Small  Size: 24, Height: 1.33
+Headline Medium  Size: 28, Height: 1.29
+Headline Large  Size: 32, Height: 1.25
+
+Display Small  Size: 36, Height: 1.22
+Display Medium  Size: 45, Height: 1.16
+Display Large  Size: 57, Height: 1.12
+*/
