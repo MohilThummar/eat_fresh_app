@@ -11,7 +11,7 @@ class SplashScreen extends StatelessWidget {
           children: [
             Text(
               "Eat Fresh",
-              style: Theme.of(context).textTheme.displayLarge,
+              style: Theme.of(context).textTheme.displayLarge!.copyWith(fontWeight: FontWeight.w600),
             ),
           ],
         ),

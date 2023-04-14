@@ -15,13 +15,13 @@ class AppTheme {
     splashColor: const Color(0x66C8C8C8),
     shadowColor: const Color(0x12000000),
     colorSchemeSeed: AppColors.primaryColor,
-    colorScheme: const ColorScheme.light().copyWith(
-      brightness: Brightness.light,
-      primary: AppColors.primaryColor,
-      secondary: AppColors.secondaryColor,
-      error: Colors.red,
-      surface: Colors.white,
-    ),
+    // colorScheme: const ColorScheme(
+    //   brightness: Brightness.light,
+    //   primary: AppColors.primaryColor,
+    //   secondary: AppColors.secondaryColor,
+    //   error: Colors.red,
+    //   surface: Colors.white,
+    // ),
 
     /// AppBar
     appBarTheme: const AppBarTheme(color: Colors.white),
@@ -37,6 +37,7 @@ class AppTheme {
     /// Text
     textTheme: buildTextTheme(ThemeData.light().textTheme),
     primaryTextTheme: buildTextTheme(ThemeData.light().textTheme),
+    fontFamily: "SF-Pro-Rounded",
 
     /// Button
     // buttonTheme: ,
@@ -63,13 +64,13 @@ class AppTheme {
     splashColor: const Color(0x66C8C8C8),
     shadowColor: const Color(0x12FFFFFF),
     colorSchemeSeed: AppColors.primaryColor,
-    colorScheme: const ColorScheme.light().copyWith(
-      brightness: Brightness.light,
-      primary: AppColors.primaryColor,
-      secondary: AppColors.secondaryColor,
-      error: Colors.red,
-      surface: Colors.black,
-    ),
+    // colorScheme: const ColorScheme(
+    //   brightness: Brightness.light,
+    //   primary: AppColors.primaryColor,
+    //   secondary: AppColors.secondaryColor,
+    //   error: Colors.red,
+    //   surface: Colors.black,
+    // ),
 
     /// AppBar
     appBarTheme: const AppBarTheme(color: Colors.black),
@@ -83,8 +84,9 @@ class AppTheme {
     // iconButtonTheme: ,
 
     /// Text
-    textTheme: buildTextTheme(ThemeData.light().textTheme),
-    primaryTextTheme: buildTextTheme(ThemeData.light().textTheme),
+    textTheme: buildTextTheme(ThemeData.dark().textTheme),
+    primaryTextTheme: buildTextTheme(ThemeData.dark().textTheme),
+    fontFamily: "SF-Pro-Rounded",
     // textButtonTheme: ,
 
     /// Button
