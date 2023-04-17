@@ -18,6 +18,8 @@ class AppStrings {
   static String logoutString = "Are you sure you want to logout?";
   static String noInternetAvailable = "No Internet available";
 
-  // Splash Screen ....
-  static String appName = "App Name";
+  // ---- Splash Screen ------------ >>>
+  static String appName = "Eat Fresh";
+
+  // ---- Welcome Screen ------------ >>>
 }

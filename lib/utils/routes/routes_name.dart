@@ -1,8 +1,7 @@
 class RoutesName {
-  //* Auth
-  static String splashScreen = '/SPLASH_SCREEN';
+  // ---- Auth ------------ >>>
+  static String splashScreen = '/';
+  static String welcomeScreen = '/WelcomeScreen';
 
-  //*DashBoard
-  static String dashboardScreen = '/DASHBOARD_SCREEN';
-
+  // ---- Auth ------------ >>>
 }

@@ -1,5 +1,6 @@
 import 'package:eat_fresh_app/res/constant/app_colors.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class AppTheme {
   final ThemeData baseLight = ThemeData.light();
@@ -8,7 +9,7 @@ class AppTheme {
   static ThemeData lightTheme = ThemeData(
     /// Colors
     brightness: Brightness.light,
-    primaryColor: AppColors.primaryColor,
+    // primaryColor: AppColors.primaryColor,
     scaffoldBackgroundColor: Colors.white,
     disabledColor: const Color(0x99b7b6b6),
     hoverColor: const Color(0x4DC8C8C8),
@@ -22,6 +23,14 @@ class AppTheme {
     //   error: Colors.red,
     //   surface: Colors.white,
     // ),
+
+    // buttonTheme:
+    elevatedButtonTheme: ElevatedButtonThemeData(
+      style: ButtonStyle(
+        backgroundColor: MaterialStateProperty.all(AppColors.primaryColor),
+        shape: MaterialStateProperty.all(RoundedRectangleBorder(borderRadius: BorderRadius.circular(10).r)),
+      ),
+    ),
 
     /// AppBar
     appBarTheme: const AppBarTheme(color: Colors.white),
@@ -37,7 +46,7 @@ class AppTheme {
     /// Text
     textTheme: buildTextTheme(ThemeData.light().textTheme),
     primaryTextTheme: buildTextTheme(ThemeData.light().textTheme),
-    fontFamily: "SF-Pro-Rounded",
+    fontFamily: "SF Pro Rounded",
 
     /// Button
     // buttonTheme: ,
@@ -57,7 +66,7 @@ class AppTheme {
   static ThemeData darkTheme = ThemeData(
     /// Colors
     brightness: Brightness.dark,
-    primaryColor: AppColors.primaryColor,
+    // primaryColor: AppColors.primaryColor,
     scaffoldBackgroundColor: Colors.black,
     disabledColor: const Color(0x99b7b6b6),
     hoverColor: const Color(0x4DC8C8C8),
@@ -71,6 +80,14 @@ class AppTheme {
     //   error: Colors.red,
     //   surface: Colors.black,
     // ),
+
+    // buttonTheme:
+    elevatedButtonTheme: ElevatedButtonThemeData(
+      style: ButtonStyle(
+        backgroundColor: MaterialStateProperty.all(AppColors.primaryColor),
+        shape: MaterialStateProperty.all(RoundedRectangleBorder(borderRadius: BorderRadius.circular(10).r)),
+      ),
+    ),
 
     /// AppBar
     appBarTheme: const AppBarTheme(color: Colors.black),
@@ -86,7 +103,7 @@ class AppTheme {
     /// Text
     textTheme: buildTextTheme(ThemeData.dark().textTheme),
     primaryTextTheme: buildTextTheme(ThemeData.dark().textTheme),
-    fontFamily: "SF-Pro-Rounded",
+    fontFamily: "SF Pro Rounded",
     // textButtonTheme: ,
 
     /// Button
@@ -108,29 +125,29 @@ class AppTheme {
 TextTheme buildTextTheme(TextTheme base) {
   return TextTheme(
     /// Body Text
-    bodySmall: base.bodySmall!.copyWith(fontSize: 12, height: 1.33),
-    bodyMedium: base.bodyMedium!.copyWith(fontSize: 14, height: 1.43),
-    bodyLarge: base.bodyLarge!.copyWith(fontSize: 16, height: 1.5),
+    bodySmall: base.bodySmall!.copyWith(fontSize: 12.sp, height: 1.33, fontFamily: "SF Pro Rounded"),
+    bodyMedium: base.bodyMedium!.copyWith(fontSize: 14.sp, height: 1.43, fontFamily: "SF Pro Rounded"),
+    bodyLarge: base.bodyLarge!.copyWith(fontSize: 16.sp, height: 1.5, fontFamily: "SF Pro Rounded"),
 
     /// Label Text
-    labelSmall: base.labelSmall!.copyWith(fontSize: 11, height: 1.45),
-    labelMedium: base.labelMedium!.copyWith(fontSize: 12, height: 1.33),
-    labelLarge: base.labelLarge!.copyWith(fontSize: 14, height: 1.43),
+    labelSmall: base.labelSmall!.copyWith(fontSize: 11.sp, height: 1.45, fontFamily: "SF Pro Rounded"),
+    labelMedium: base.labelMedium!.copyWith(fontSize: 12.sp, height: 1.33, fontFamily: "SF Pro Rounded"),
+    labelLarge: base.labelLarge!.copyWith(fontSize: 14.sp, height: 1.43, fontFamily: "SF Pro Rounded"),
 
     /// Title Text
-    titleSmall: base.titleSmall!.copyWith(fontSize: 14, height: 1.43),
-    titleMedium: base.titleMedium!.copyWith(fontSize: 16, height: 1.5),
-    titleLarge: base.titleLarge!.copyWith(fontSize: 22, height: 1.27),
+    titleSmall: base.titleSmall!.copyWith(fontSize: 14.sp, height: 1.43, fontFamily: "SF Pro Rounded"),
+    titleMedium: base.titleMedium!.copyWith(fontSize: 16.sp, height: 1.5, fontFamily: "SF Pro Rounded"),
+    titleLarge: base.titleLarge!.copyWith(fontSize: 22.sp, height: 1.27, fontFamily: "SF Pro Rounded"),
 
     /// Headline Text
-    headlineSmall: base.headlineSmall!.copyWith(fontSize: 24, height: 1.33),
-    headlineMedium: base.headlineMedium!.copyWith(fontSize: 28, height: 1.29),
-    headlineLarge: base.headlineLarge!.copyWith(fontSize: 32, height: 1.25),
+    headlineSmall: base.headlineSmall!.copyWith(fontSize: 24.sp, height: 1.33, fontFamily: "SF Pro Rounded"),
+    headlineMedium: base.headlineMedium!.copyWith(fontSize: 28.sp, height: 1.29, fontFamily: "SF Pro Rounded"),
+    headlineLarge: base.headlineLarge!.copyWith(fontSize: 32.sp, height: 1.25, fontFamily: "SF Pro Rounded"),
 
     /// Display Text
-    displaySmall: base.displaySmall!.copyWith(fontSize: 36, height: 1.22),
-    displayMedium: base.displayMedium!.copyWith(fontSize: 45, height: 1.16),
-    displayLarge: base.displayLarge!.copyWith(fontSize: 57, height: 1.12),
+    displaySmall: base.displaySmall!.copyWith(fontSize: 36.sp, height: 1.22, fontFamily: "SF Pro Rounded"),
+    displayMedium: base.displayMedium!.copyWith(fontSize: 45.sp, height: 1.16, fontFamily: "SF Pro Rounded"),
+    displayLarge: base.displayLarge!.copyWith(fontSize: 57.sp, height: 1.12, fontFamily: "SF Pro Rounded"),
   );
 }
 
