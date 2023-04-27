@@ -24,6 +24,7 @@ class AppTheme {
     //   surface: Colors.white,
     // ),
 
+    /// Button
     // buttonTheme:
     elevatedButtonTheme: ElevatedButtonThemeData(
       style: ButtonStyle(
@@ -81,6 +82,7 @@ class AppTheme {
     //   surface: Colors.black,
     // ),
 
+    /// Button
     // buttonTheme:
     elevatedButtonTheme: ElevatedButtonThemeData(
       style: ButtonStyle(
@@ -113,7 +115,6 @@ class AppTheme {
     /// Dialog Box
     // dialogTheme: ,
     // dialogBackgroundColor: ,
-
     splashFactory: InkRipple.splashFactory,
     visualDensity: VisualDensity.comfortable,
     indicatorColor: AppColors.primaryColor,
