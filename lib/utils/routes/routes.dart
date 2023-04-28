@@ -6,6 +6,7 @@ import '../../view/splash/splash_binding.dart';
 import '../../view/splash/splash_screen.dart';
 import 'routes_name.dart';
 
+/// <<< Routs navigator animation common --------- >>>
 GetPage getPage({String? name, GetPageBuilder? page, Bindings? binding}) {
   return GetPage(
     name: name!,
@@ -16,6 +17,7 @@ GetPage getPage({String? name, GetPageBuilder? page, Bindings? binding}) {
   );
 }
 
+/// <<< List of all Routs --------- >>>
 List<GetPage> pages = [
   getPage(name: RoutesName.splashScreen, page: () => const SplashScreen(), binding: SplashBindings()),
   getPage(name: RoutesName.welcomeScreen, page: () => const WelcomeScreen(), binding: WelcomeBindings()),

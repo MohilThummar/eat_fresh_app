@@ -59,7 +59,8 @@ void printWhite(String text) {
   }
 }
 
-/// Color Print code --------------->>>>
+/// Color Print code -------------- >>>>
+/*
 void colorCodeExample() {
   debugPrint("\x1B[1m 1hello \x1B[0m");
   debugPrint("\x1B[3m 3hello \x1B[0m");
@@ -103,3 +104,4 @@ void colorCodeExample() {
   debugPrint("\x1B[107m 107hello \x1B[0m");
   debugPrint("\x1B[108m 108hello \x1B[0m");
 }
+*/

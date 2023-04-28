@@ -2,30 +2,30 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:get/get.dart';
 
+/// <<< Common App button --------- >>>
+
 class AppButton extends StatelessWidget {
-  final String title;
+  final String? title;
+  final bool? disableButton;
+  final VoidCallback? onPressed;
+  final VoidCallback? onLongPress;
+  final double? height;
   final double? width;
+  final Widget? child;
   final IconData? icon;
   final String? image;
-  final double? height;
-  final double? fontSize;
-  final Widget? child;
-  final bool? disableButton;
-  final VoidCallback onPressed;
-  final VoidCallback? onLongPress;
 
   const AppButton({
     super.key,
-    required this.title,
-    this.width,
-    this.icon,
-    this.image,
-    this.height,
-    this.fontSize,
-    this.child,
-    this.disableButton = false,
+    this.title = "",
     required this.onPressed,
     this.onLongPress,
+    this.disableButton = false,
+    this.height,
+    this.width,
+    this.child,
+    this.icon,
+    this.image = "",
   });
 
   @override
@@ -47,32 +47,24 @@ class AppButton extends StatelessWidget {
                   size: 24,
                 ),
                 const SizedBox(width: 5),
-              ] else
-                const SizedBox(),
-              if (image != null && image != "") ...[
+              ],
+              if (image!.isNotEmpty) ...[
                 image!.contains(".svg")
                     ? SvgPicture.asset(
                         image!,
                         height: 22,
-                        alignment: Alignment.bottomLeft,
                       )
                     : Image.asset(
                         image!,
                         height: 22,
-                        color: Colors.white,
-                        alignment: Alignment.bottomLeft,
                       ),
                 const SizedBox(width: 5)
-              ] else
-                const SizedBox(),
-              if (title != "")
+              ],
+              if (title!.isNotEmpty)
                 Text(
-                  title,
+                  title!,
                   textAlign: TextAlign.center,
-                  style: Theme.of(context).textTheme.titleMedium,
                 )
-              else
-                const SizedBox(),
             ],
           ),
     );

@@ -1,6 +1,6 @@
-class AppStrings {
-  /// HOW TO USE: Text(AppStrings.appName);
+/// <<< Entire app Strings --------- >>>
 
+class AppStrings {
   // Common String for all app ....
   static String ok = "Ok";
   static String okay = "Okay";
@@ -23,3 +23,11 @@ class AppStrings {
 
   // ---- Welcome Screen ------------ >>>
 }
+
+/// Note: HOW TO USE THIS STRING IN APP ----->>>
+/*
+    Text(
+       AppStrings.appName,
+       style: Theme.of(context).textTheme.displayMedium!,
+    ),
+*/

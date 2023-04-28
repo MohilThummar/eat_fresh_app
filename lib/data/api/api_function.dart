@@ -1,12 +1,12 @@
+import 'package:connectivity_plus/connectivity_plus.dart';
 import 'package:eat_fresh_app/data/api/api_class.dart';
 import 'package:eat_fresh_app/res/constant/app_strings.dart';
 import 'package:eat_fresh_app/utils/color_print.dart';
 import 'package:eat_fresh_app/utils/utils.dart';
-import 'package:connectivity_plus/connectivity_plus.dart';
 import 'package:flutter/services.dart';
 
 class APIFunction {
-  /// ------ To Check Internet Availability -------------------->>>
+  /// <<< To Check Internet Availability ------------------- >>>
   ConnectivityResult? connectivityResult;
   final Connectivity connectivity = Connectivity();
 
@@ -27,7 +27,7 @@ class APIFunction {
     }
   }
 
-  /// ------ To Call Post Api -------------------->>>
+  /// <<< To Call Post Api ------------------- >>>
   Future<dynamic> postApiCall({
     required String apiName,
     dynamic params,
@@ -44,7 +44,7 @@ class APIFunction {
     }
   }
 
-  /// ------ To Call Get Api -------------------->>>
+  /// <<< To Call Get Api ------------------- >>>
   Future<dynamic> getApiCall({
     required String apiName,
     dynamic queryParameters,
